@@ -8,7 +8,7 @@ router = APIRouter()
 
 @router.post("/messages/", response_model=MessageSchema, status_code=status.HTTP_201_CREATED)
 def create_message(message_data: MessageCreate, service: MessageService = Depends()):
-    return service.create_message(message_data)
+    return "JAJA"
 
 @router.post("/messages/async", response_model=MessageSchema, status_code=status.HTTP_201_CREATED)
 async def create_message_async(message_data: MessageCreate, service: MessageService = Depends()):
